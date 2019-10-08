@@ -1,0 +1,19 @@
+n = int(input('Digite a quantidade de elementos da lista: '))
+primeiro = 0
+segundo = 0
+terceiro = 0
+quarto = 0
+import random
+lista = []
+for i in range (0,n):
+    lista.append(random.randrange(0,99))
+    if lista[i]<25:
+        primeiro +=1
+    elif lista[i]<50:
+        segundo +=1
+    elif lista[i]<75:
+        terceiro +=1
+    else:
+        quqarto +=1
+print (lista)
+print ('Existem {0} elementos no primeiro quartil, {1} no segundo, {2} no terceiro e {3} no quarto'.format(primeiro,segundo,terceiro,quarto))
