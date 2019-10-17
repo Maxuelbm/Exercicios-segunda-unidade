@@ -1,0 +1,14 @@
+n = int(input('Digite a quantidade de elementos da lista: '))
+import random
+lista = []
+contador = 0
+
+for i in range (0,n):
+    lista.append(random.randrange(0,100))
+for j in range (len(lista)):
+    for k in range (j, len(lista)):
+        if lista[j] == lista[k]:
+            contador += 1
+
+print (lista)
+print(contador)
