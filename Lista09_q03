@@ -6,16 +6,17 @@ try:
 
     lista_x = []
     lista_y = []
-    produto = []
+    produto = 0
 
     for i in range (0,n):
         lista_x.append(random.randrange(1,21))
         lista_y.append(random.randrange(1,21))
-        produto.append(lista_x[i]*lista_y[i])
+        produto = produto+(lista_x[i]*lista_y[i])
 
     print(lista_x)
     print(lista_y)
     print(produto)
+    
 except ValueError:
     print('Digite um valor válido')
 except:
