@@ -1,0 +1,44 @@
+import random
+import sys
+
+try:
+    n = int(input('Digite o número de vezes que o dado será lançado: '))
+
+    lados = []
+    c1 = 0
+    c2 = 0
+    c3 = 0
+    c4 = 0
+    c5 = 0
+    c6 = 0
+
+    if n <= 0:
+        print ('Digite um valor positivo')
+    else:   
+        for i in range (0,n):
+            lados.append(random.randrange(1,7))
+        for x in lados:
+            if x==1:
+                c1 += 1
+            elif x== 2:
+                c2 += 1
+            elif x==3:
+                c3 += 1
+            elif x==4:
+                c4 += 1
+            elif x==5:
+                c5 +=1
+            else:
+                c6 +=1
+        print ('os lados repetiram nas quantidades abaixo: ')
+        print ('Lado 1: ',c1)
+        print ('Lado 2: ',c2)
+        print ('Lado 3: ',c3)
+        print ('Lado 4: ',c4)
+        print ('Lado 5: ',c5)
+        print ('Lado 6: ',c6)
+        print (lados)
+except ValueError:
+    print ('Digite um valor válido')
+except:
+    print ('Houve um erro{0}'.format(sys.exc_info()[0]))
