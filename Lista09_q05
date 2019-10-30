@@ -4,21 +4,28 @@ import sys
 try:
     m = int(input('Digite o número de linhas da lista A: '))
     n = int(input('Digite o número de colunas da lista A: '))
-    m2 = int(input('Digite o número de elementos da lista V: '))
 
     lista_a = []
-    lista_a_coluna = []
     lista_v = []
-
+    
+    #Adicionando valores na lista A
     for k in range (0,m):
-        lista_a.append(lista_a_coluna)
+        lista_a_coluna = [] #Zerar a lista
         for i in range (0,n):
             lista_a_coluna.append(random.randrange(1,11))
-        
+        lista_a.append(lista_a_coluna)
 
+    #Adicionando valores na lista V
+    for p in range (0,n):
+        lista_v.append(random.randrange(1,11))
+    
+    #Multiplicando V e A
+    for x in range(lista_a):
+        for y in range(lista_a[x]):
+            produto = y*lista_v[]
+
+    
+    
     print (lista_a_coluna)
     print (lista_a)
     print (lista_v)
-
-except ValueError:
-    print ('Digite um valor válido')
