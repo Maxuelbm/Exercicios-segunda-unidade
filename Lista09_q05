@@ -7,6 +7,7 @@ try:
 
     lista_a = []
     lista_v = []
+    produto = []
     
     #Adicionando valores na lista A
     for k in range (0,m):
@@ -20,12 +21,17 @@ try:
         lista_v.append(random.randrange(1,11))
     
     #Multiplicando V e A
-    for x in range(lista_a):
-        for y in range(lista_a[x]):
-            produto = y*lista_v[]
+    for x in range (m):
+        produto_coluna = []
+        for y in range (n):
+            produto_coluna.append(lista_v[y]*lista_a[y])
+        produto.append(produto_coluna)
 
-    
-    
     print (lista_a_coluna)
     print (lista_a)
     print (lista_v)
+    print (produto_coluna)
+    print (produto)
+
+except ValueError:
+    print ('Digite um valor válido')
