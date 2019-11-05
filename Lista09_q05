@@ -23,9 +23,14 @@ try:
     #Multiplicando V e A
     for x in range (m):
         produto_coluna = []
-        for y in range (n):
-            produto_coluna.append(lista_v[y]*lista_a[y])
+        for y in range(n):
+            produto_coluna.append(lista_v[y]*lista_a[x][y])
         produto.append(produto_coluna)
+        lista_final.append(produto[m][])
+    
+    for f in range (m):
+    lista_final
+    #Produto da lista
 
     print (lista_a_coluna)
     print (lista_a)
