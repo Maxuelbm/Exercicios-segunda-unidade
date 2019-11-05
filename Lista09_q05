@@ -26,17 +26,13 @@ try:
         for y in range(n):
             produto_coluna.append(lista_v[y]*lista_a[x][y])
         produto.append(produto_coluna)
-        lista_final.append(produto[m][])
+        
     
-    for f in range (m):
-    lista_final
-    #Produto da lista
-
-    print (lista_a_coluna)
+    #Caso queira checar os valores gerados, retirar o jogo da velha
     print (lista_a)
     print (lista_v)
-    print (produto_coluna)
-    print (produto)
+
+    print ('O produto entre A e V é: ',produto)
 
 except ValueError:
     print ('Digite um valor válido')
