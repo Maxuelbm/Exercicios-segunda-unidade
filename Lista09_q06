@@ -1,0 +1,49 @@
+import random
+import sys
+
+lista_a = []
+lista_b = []
+
+m = 4
+n = 3
+p = 5
+
+try:
+    #Adicionando os valores na lista A
+    for i in range (m):
+        lista_a_c = []
+        for j in range (n):
+            lista_a_c.append(random.randrange(1,11))
+        lista_a.append(lista_a_c)
+    
+    #Adicionando os valores na lista B
+    for k in range (n):
+        lista_b_c = []
+        for l in range (p):
+            lista_b_c.append(random.randrange(1,11))
+        lista_b.append(lista_b_c)
+
+    #Realizando o produto entre as listas A e B
+    lista_produto = []
+    for t in range (m):
+        lista_produto_c = []
+        for x in range (p):
+            elemento_c = []
+            produto = 0
+            for y in range (n):
+                produto = produto + (lista_a[t][y]*lista_b[y][x])   
+            elemento_c.append(produto)   
+            lista_produto_c.append(elemento_c)
+        lista_produto.append(lista_produto_c)
+
+    #Valores das listas
+    print('lista A: ',lista_a)
+    print('lista B: ',lista_b)
+    print('último elemento: ',elemento_c)
+    print('última coluna: ',lista_produto_c)
+    print('Produto entra A e B: ',lista_produto)
+
+except ValueError:
+    print('Digite um valor válido')
+except:
+    print('Houve um erro {0}'.format(sys.exc_info()[0]))
