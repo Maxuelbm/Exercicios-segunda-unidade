@@ -9,30 +9,33 @@ try:
     lista_v = []
     produto = []
     
-    #Adicionando valores na lista A
-    for k in range (0,m):
-        lista_a_coluna = [] #Zerar a lista
-        for i in range (0,n):
-            lista_a_coluna.append(random.randrange(1,11))
-        lista_a.append(lista_a_coluna)
+    if n <= 0 or m <=0:
+        print ('Digite um valor positivo')
+    else: 
+        #Adicionando valores na lista A
+        for k in range (0,m):
+            lista_a_coluna = [] #Zerar a lista
+            for i in range (0,n):
+                lista_a_coluna.append(random.randrange(1,11))
+            lista_a.append(lista_a_coluna)
 
-    #Adicionando valores na lista V
-    for p in range (0,n):
-        lista_v.append(random.randrange(1,11))
-    
-    #Multiplicando V e A
-    for x in range (m):
-        produto_coluna = []
-        for y in range(n):
-            produto_coluna.append(lista_v[y]*lista_a[x][y])
-        produto.append(produto_coluna)
+        #Adicionando valores na lista V
+        for p in range (0,n):
+            lista_v.append(random.randrange(1,11))
         
-    
-    #Caso queira checar os valores gerados, retirar o jogo da velha
-    print (lista_a)
-    print (lista_v)
+        #Multiplicando V e A
+        for x in range (m):
+            produto_coluna = []
+            for y in range(n):
+                produto_coluna.append(lista_v[y]*lista_a[x][y])
+            produto.append(produto_coluna)
+            
+        
+        #Caso queira checar os valores gerados, retirar o jogo da velha
+        print (lista_a)
+        print (lista_v)
 
-    print ('O produto entre A e V é: ',produto)
+        print ('O produto entre A e V é: ',produto)
 
 except ValueError:
     print ('Digite um valor válido')
