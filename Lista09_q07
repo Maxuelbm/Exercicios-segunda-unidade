@@ -1,0 +1,25 @@
+import random
+import sys
+
+m = 4
+n = 3
+lista = []
+
+try:
+    #Adicionando elementos na lista
+    for i in range (m):
+        lista_c = []
+        for j in range (n):
+            lista_c.append(random.randrange(1,11))
+        lista.append(lista_c)
+    
+    #Realizando a transposta
+    for k in range (m):
+        for l in range(n):
+
+
+    print (lista)
+except ValueError:
+    print('Digite um valor válido')
+except:
+    print('Houve um erro...{0}'.format(sys.exc_info()[0]))
