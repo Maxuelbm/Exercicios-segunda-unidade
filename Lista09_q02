@@ -23,13 +23,13 @@ try:
     maior = 0
     for x in range(n):
         for y in range(x+1, n):
-            if lista_c[x]>=lista_c[y]:
+            if lista_c[x]>lista_c[y]:
                 maior = lista_c[x]
-    menor = 0
+    menor = maior
     #Veriicando o(s) elemento(s) que menos repetiram
     for z in range(n):
         for t in range(z+1, n):
-            if lista_c[z]<=lista_c[t]:
+            if lista_c[z]<menor:
                 menor = lista_c[z]
 
     print (lista)
@@ -49,3 +49,5 @@ try:
 
 except ValueError:
     print('Digite um valor válido')
+except:
+    print('Houve um erro...{0}'.format(sys.exc_info()[0]))
