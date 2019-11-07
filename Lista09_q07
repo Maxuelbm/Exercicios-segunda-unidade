@@ -1,24 +1,29 @@
 import random
 import sys
 
-m = 4
-n = 3
+linha = 4
+coluna = 3
 lista = []
 
 try:
     #Adicionando elementos na lista
-    for i in range (m):
+    for i in range (linha):
         lista_c = []
-        for j in range (n):
+        for j in range (coluna):
             lista_c.append(random.randrange(1,11))
         lista.append(lista_c)
     
     #Realizando a transposta
-    for k in range (m):
-        for l in range(n):
+    transposta = []
+    for k in range (coluna):
+        linha_t = []
+        for l in range (linha):
+            linha_t.append(lista[l][k])
+        transposta.append(linha_t)
 
+    print ('Lista A: ',lista)
+    print ('Transposta da lista A: ',transposta)
 
-    print (lista)
 except ValueError:
     print('Digite um valor válido')
 except:
